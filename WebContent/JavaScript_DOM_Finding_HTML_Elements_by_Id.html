@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>JavaScript DOM Finding HTML Elements by Id</title>
+</head>
+<body>
+	<p id="intro">Hello World!</p>
+	<p>
+		This example demonstrates the <b>getElementById</b> method!
+	</p>
+
+	<script>
+		/*Finding HTML Elements by Id
+		The easiest way to find HTML elements in the DOM, is by using the element id.
+		This example finds the element with id="intro":
+		If the element is found, the method will return the element as an object (in x).
+		If the element is not found, x will contain null.
+		*/
+		x = document.getElementById("intro");
+		document.write("<p>The text from the intro paragraph: " + x.innerHTML
+				+ "</p>")
+	</script>
+
+</body>
+</html>

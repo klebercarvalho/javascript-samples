@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>JavaScript Throw</title>
+</head>
+<body>
+	<script>
+		/*
+		 This example examines the value of an input variable. 
+		 If the value is wrong, an exception (error) is thrown. 
+		 The error is caught by the catch statement and a custom error message is displayed.
+		 Note that the example above will also throw an error if the getElementById function fails.
+		 */
+		function myFunction() {
+			try {
+				var x = document.getElementById("demo").value;
+				if (x == "")
+					throw "empty";
+				if (isNaN(x))
+					throw "not a number";
+				if (x > 10)
+					throw "to high";
+				if (x < 5)
+					throw "too low";
+			} catch (err) {
+				var y = document.getElementById("mess");
+				y.innerHTML = "Error: " + err + ".";
+			}
+		}
+	</script>
+
+	<h1>My First JavaScript</h1>
+	<p>Please input a number between 5 and 10:</p>
+	<input id="demo" type="text">
+	<button type="button" onclick="myFunction()">Test Input</button>
+	<p id="mess"></p>
+</body>
+</html>

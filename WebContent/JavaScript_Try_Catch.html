@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>JavaScript Try Catch</title>
+<script>
+	/*
+	 In the example below we have deliberately made a typo in the code in the try block.
+	 The catch block catches the error in the try block, and executes code to handle it:
+	 */
+	var txt = "";
+	function message() {
+		try {
+			adddlert("Welcome guest!");
+		} catch (err) {
+			txt = "There was an error on this page.\n\n";
+			txt += "Error description: " + err.message + "\n\n";
+			txt += "Click OK to continue.\n\n";
+			alert(txt);
+		}
+	}
+</script>
+</head>
+
+<body>
+	<input type="button" value="View message" onclick="message()">
+</body>
+
+</html>
