@@ -1,4 +1,6 @@
 javascript-samples
 ==================
 
-JavaScript Samples Repository
+JavaScript Samples Repository.
+
+Project description:
